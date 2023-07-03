@@ -6,9 +6,6 @@ M.general = {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
-    -- transparent
-    ["<leader>te"] = { "<cmd> TransparentEnable<CR>", "enable background transparent" },
-    ["<leader>tt"] = { "<cmd> TransparentToggle<CR>", "toggle background transparent" },
   },
 }
 

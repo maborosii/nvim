@@ -122,14 +122,6 @@ local plugins = {
     end,
   },
   {
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-    -- enabled = true,
-    config = function()
-      require "custom.configs.transparent"
-    end,
-  },
-  {
     "rmagatti/auto-session",
     lazy = false,
     config = function()
