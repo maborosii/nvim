@@ -5,12 +5,17 @@ local plugins = {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-
   {
     "anuvyklack/pretty-fold.nvim",
     lazy = false,
     config = function()
       require("custom.configs.pretty-fold").config()
+    end,
+  },
+  {
+    "ethanholz/nvim-lastplace",
+    config = function()
+      require("custom.configs.lastplace").config()
     end,
   },
   {
@@ -125,13 +130,13 @@ local plugins = {
       return M
     end,
   },
-  {
-    "rmagatti/auto-session",
-    lazy = false,
-    config = function()
-      require "custom.configs.auto-session"
-    end,
-  },
+  -- {
+  --   "rmagatti/auto-session",
+  --   lazy = false,
+  --   config = function()
+  --     require "custom.configs.auto-session"
+  --   end,
+  -- },
   -- nvim-treesitter
   {
     "p00f/nvim-ts-rainbow",
