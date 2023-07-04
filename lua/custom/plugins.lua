@@ -5,11 +5,12 @@ local plugins = {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+
   {
     "anuvyklack/pretty-fold.nvim",
     lazy = false,
     config = function()
-      require("pretty-fold").setup()
+      require("custom.configs.pretty-fold").config()
     end,
   },
   {
@@ -32,13 +33,16 @@ local plugins = {
     config = function()
       require "custom.configs.rust-tools"
     end,
+  },
 
-    -- opts = function()
-    --   return require "custom.configs.rust-tools"
-    -- end,
-    -- config = function(_, opts)
-    --   require("rust-tools").setup(opts)
-    -- end,
+  -- rust
+  {
+    "simrat39/rust-tools.nvim",
+    ft = { "rust" },
+    config = function()
+      require("custom.configs.rust-tools").config()
+    end,
+    dependencies = { "neovim/nvim-lspconfig", "ray-x/lsp_signature.nvim" },
   },
   {
     "jose-elias-alvarez/null-ls.nvim",

@@ -4,5 +4,3 @@ vim.opt.colorcolumn = "80"
 
 -- Disable persistent undo
 vim.opt.undofile = false
-
-
