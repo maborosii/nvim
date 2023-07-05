@@ -3,7 +3,7 @@ local M = {}
 
 M.ui = {
   theme = "everforest",
-  transparency = false,
+  transparency = true,
   statusline = {
     theme = "default",
   },
