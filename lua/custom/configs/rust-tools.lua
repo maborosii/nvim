@@ -21,7 +21,7 @@ local lsp_flags = {
 }
 local util = require "lspconfig/util"
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -58,7 +58,7 @@ function M.config()
     server = {
       on_attach = on_attach,
       -- already given by lspconfig
-      -- capabilities = capabilities,
+      capabilities = capabilities,
       root_dir = util.root_pattern "Cargo.toml",
       settings = {
         ["rust_analyzer"] = {

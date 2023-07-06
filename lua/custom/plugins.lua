@@ -31,14 +31,14 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
-  {
-    "simrat39/rust-tools.nvim",
-    ft = "rust",
-    dependencies = "neovim/nvim-lspconfig",
-    config = function()
-      require "custom.configs.rust-tools"
-    end,
-  },
+  -- {
+  --   "simrat39/rust-tools.nvim",
+  --   ft = "rust",
+  --   dependencies = "neovim/nvim-lspconfig",
+  --   config = function()
+  --     require "custom.configs.rust-tools"
+  --   end,
+  -- },
 
   -- rust
   {
@@ -168,5 +168,39 @@ local plugins = {
   --     require("indent_blankline").setup(opts)
   --   end,
   -- },
+
+  --  notify
+  -- {
+  --   "rcarriga/nvim-notify",
+  --   lazy = false,
+  --   config = function()
+  --     require("custom.configs.notify").config()
+  --   end,
+  -- },
+  -- {
+  --   "VonHeikemen/fine-cmdline.nvim",
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   lazy = false,
+  --   keys = {
+  --     { ":", "<cmd>FineCmdline<CR>", desc = "Commandline Floating" },
+  --   },
+  -- },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    },
+  },
 }
 return plugins
