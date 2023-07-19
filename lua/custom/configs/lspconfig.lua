@@ -20,6 +20,12 @@ lspconfig.pylsp.setup {
   },
 }
 
+lspconfig.bashls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "sh" },
+}
+
 lspconfig.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,

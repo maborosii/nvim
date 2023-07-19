@@ -6,6 +6,7 @@ local opts = {
     null_ls.builtins.formatting.gofmt.with {
       filetypes = { "go" },
     },
+    null_ls.builtins.formatting.beautysh,
     null_ls.builtins.formatting.goimports_reviser.with {
       filetypes = { "go" },
     },
