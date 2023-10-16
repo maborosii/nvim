@@ -153,6 +153,11 @@ local plugins = {
       require("nvim-treesitter.configs").setup(opts)
     end,
   },
+  {
+    "NoahTheDuke/vim-just",
+    event = { "BufReadPre", "BufNewFile" },
+    ft = { "\\cjustfile", "*.just", ".justfile" },
+  },
   -- indent
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
